@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+
+
+    <style>
+
+        .cont {
+            border: 10px solid green;
+            background-color: aqua;
+            width: 700px;
+            margin: 100px 450px  50px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+            grid-template-rows: repeat(2,auto);
+            /* grid-row-gap: 30px;
+            grid-column-gap: 20px; */
+            grid-gap: 15px 20px;
+           
+        }
+
+        .itmes {
+          border:1px solid black;
+          display: grid;
+         place-content: center;
+         
+        }
+        .item1 {
+
+            /* grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3; */
+
+            /* shortcut */
+            /* grid-row: 2/3;
+            grid-column: 2/3; */
+
+
+            /* super shortcut */
+
+            /* grid-area: rowstart  / columnstart / rowend / columnend; */
+
+            grid-area: 2/2/3/3;
+
+
+
+
+        }
+        .item3 { 
+            /* grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4; */
+
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="itmes item1" style="background-color: yellowgreen;">1</div>
+      <div class="itmes item2" style="background-color: yellowgreen;">2</div>
+
+      <div class="itmes item3" style="background-color: yellowgreen;">3</div>
+      <div class="itmes item4" style="background-color: yellowgreen;">4</div>
+
+      <div class="itmes item5" style="background-color: yellowgreen;">5</div>
+
+      <div class="itmes item6" style="background-color: yellowgreen;">6</div>
+    </div>
+  </body>
+</html>
